@@ -1,0 +1,30 @@
+main {
+    height: 100vh;
+    display: grid;
+    font-family: sans-serif;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+    /* Forma abreviada, 8 columnas de una fraccion cada una
+    repeat(8, 1); */
+
+    /* 8 Columnas con un minimo 100px y un maximo 1fraccion
+    repeat(8, minmax(50px, 1fr)); /*
+
+    /* 8 columnas con un patron dos (30 px , minimo 10% y maximo flexible(fr))
+    repeat(4, 30px minmax(10%, 1fr)); */
+
+    /* 8 columnas con un minimo marcado por el contenido y un maximo del 30%
+    repeat(8, minmax(min-content, 30%));  */
+
+    /* 8 columnas con un maximo y minimo marcado por su contenido
+    repeat(8, minmax(min-content, max-content))  */
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #420a53;
+    color: white;
+}

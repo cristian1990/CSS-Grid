@@ -1,0 +1,22 @@
+main {
+    display: grid;
+    grid-gap: 10px;
+    height: 100vh;
+    font-family: sans-serif;
+    grid-template-columns:
+        
+        /*repetimos 4 veces un patron*/
+        repeat(4,
+            minmax(80px, 1fr)
+            minmax(40px, 1fr)
+            minmax(20px, 1fr)
+        ) ;
+}
+
+div {
+    background-color: brown;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

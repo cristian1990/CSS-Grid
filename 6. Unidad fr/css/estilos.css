@@ -1,0 +1,31 @@
+/*fr = fraccion (Parte del espacio disponible)*/
+main {
+    display: grid;
+    height: 100vh;
+    grid-gap: 10px;
+    font-family: sans-serif;
+    grid-template-columns: 1fr 1fr 1fr; /*3 Columnas de 1 fraccion cada una (se puede combinar con px o %)*/
+    grid-template-rows: 1fr 2fr 1fr; /*3 Filas, 2 de una fraccion y 1 de dos fracciones*/
+}
+
+main > * {
+    background-color: goldenrod;
+    /*FLEX*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 700px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr); /*5 filas de una fraccion del espacio cada una*/
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        grid-template-columns: 1fr; /*1 columna de una fraccion del espacio cada una */
+        grid-template-rows: repeat(9, 1fr); /*9 filas de una fraccion del espacio cada una*/
+    }
+}
