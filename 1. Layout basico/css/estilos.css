@@ -1,0 +1,54 @@
+main > * {
+    background-color: #aab7fc;
+    padding: 10px;
+    font-size: 3em;
+}
+
+/*Definimos el Grid container*/
+main {
+    display:grid;
+    grid-gap: 10px; /*Espacio entre cada elemento*/
+    /*definimos el orden*/
+    grid-template-areas: 
+        "header"
+        "izquierda"
+        "contenido"
+        "derecha"
+        "footer";
+}
+
+/*Desktop*/
+@media (min-width: 700px){
+    main {
+        grid-template-areas:
+        "header header header"
+        "izquierda contenido derecha"
+        "footer footer footer" 
+    }
+}
+
+/*Nombramos los elementos*/
+header {
+    grid-area: header;
+}
+aside:first-of-type{
+    grid-area: izquierda;
+    height: 500px;
+    min-width: 300px;
+}
+
+article {
+    grid-area: contenido;
+    min-height: 500px;
+    min-width: 750px;
+}
+
+aside:last-of-type {
+    grid-area: derecha;
+    height: 500px;
+    min-width: 300px;
+}
+
+footer {
+    grid-area: footer;
+}

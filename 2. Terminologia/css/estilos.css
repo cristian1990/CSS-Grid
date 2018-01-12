@@ -1,0 +1,81 @@
+/*GRID Context = Grid Container & Grid Item.
+• Grid Container = main (por lo general).
+• Grid Item = Lo que abarca el contenedor (header, footer, etc.).
+• Grid Line = Es cada Lineas vertical u horizontal.
+• Grid Track = Es el espacio vertical u horizontal entre 2 Grid Lines CONSECUTIVAS (3 grid cell).
+• Grid Cell = El contenido que hay entre 4 Grid Lines.
+• Grid Area = Cualquier porcion del Grid Contenida entre 4 Grid Lines.
+*/
+
+/*Definimos el grid container*/
+main {
+    height: 100vh;
+    /*GRID*/
+    display: grid;
+    grid-gap: 20px; /*Separacion entre contenedores*/
+    grid-template-columns: 100px 100px 100px 100px; /*Cuantas columnas quiero*/
+    grid-auto-rows: 100px 100px 100px; /*Cuantas filas quiero*/
+}
+
+div {
+    /*FLEX*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: goldenrod;
+}
+
+div:nth-child(7) {
+    background-color: goldenrod;
+    color: black;
+    grid-column: 4 / 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+div:nth-child(8) {
+    background-color: goldenrod;
+    color: black;
+    grid-column: 3 / 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+
+@media(max-width:600px) {
+    /*Selecciono el div 10*/
+    div:nth-child(10) {
+        background-color: red;
+        color: white;
+        grid-column-start: 3;
+        grid-column-end: 5;
+    /*  grid-column: 3 / 5;  (Forma abreviada)*/ 
+    }
+
+    div:nth-child(6) {
+        background-color: blue;
+        color: white;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    /*  grid-column: 2 / 4;  (Forma abreviada)*/ 
+    }
+
+    div:nth-child(7) {
+        background-color: goldenrod;
+        color: black;
+        grid-column: 4 / 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    
+    div:nth-child(8) {
+        background-color: goldenrod;
+        color: black;
+        grid-column: 3 / 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+}

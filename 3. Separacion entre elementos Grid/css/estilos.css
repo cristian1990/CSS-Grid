@@ -1,0 +1,27 @@
+/*Definimos el grid container
+    • fr = (parte del total) - Tiene precedencia sobre auto. */
+main {
+    height: 100vh;
+    display: grid;
+    grid-row-gap: 10px; /*Separacion entre filas*/
+    grid-column-gap: 30px; /*Separacion entre columnas*/
+  /*grid-gap: 10px 30px;  -  Forma abreviada*/
+
+    grid-template-columns: 1fr 1fr 1fr;
+  /*grid-template-columns: repeat(3, 1fr); - Forma abreviada*/
+
+    grid-template-rows: 1fr 1fr 1fr;
+  /*grid-template-rows: repeat(3, 1fr);  -  Forma abreviada*/
+
+  /*Implicit grid*/
+  grid-auto-rows: 1fr;
+
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: purple;
+    color: white;
+}

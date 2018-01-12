@@ -1,0 +1,32 @@
+/*Definimos el grid container*/
+main {
+    display: grid;
+    height: 100vh;
+    grid-gap: 10px; /*Separacion entre contenedores*/
+ /* grid-template-columns: 1fr 2fr; */
+
+    grid-template-columns: 
+        [sidebar-start] 1fr
+        [contenido-start] 2fr;
+
+    grid-template-rows: 
+        [header-start] 1fr
+        [contenido-start] 2fr
+        [footer-start] 1fr
+}
+
+main > * {
+    font-family: sans-serif;
+    background-color: goldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+header {
+    grid-column: sidebar-start / span 2; /*ocupa 2 espacios*/
+}
+
+footer {
+    grid-column: sidebar-start / -1; /*Siempre ocupa hasta el final*/
+}
