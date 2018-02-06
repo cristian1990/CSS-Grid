@@ -1,0 +1,39 @@
+section {
+    display: grid;
+    grid-gap: 10px;
+    font-family: sans-serif;
+    margin: 20px 0;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+}
+
+.auto-fill div {
+    background-color: goldenrod;
+    color: white;
+}
+
+.auto-fit div {
+    background-color: purple;
+    color: white;
+}
+
+.auto-fill {
+    /*4 grid-track con 100px de minimo y 1fr de maximo
+    grid-template-columns: repeat(4, minmax(100px, 1fr));*/
+
+    /*cuantos grid-track como entren (auto-fill) dependiendo del tamaño
+    de la pantalla con 100px de minimo y 1fr de maximo*/
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.auto-fit {
+    /*colapsan a 0 los grid-track que no se estan utilizando (auto-fit)
+    con 100px de minimo y 1fr de maximo*/
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
