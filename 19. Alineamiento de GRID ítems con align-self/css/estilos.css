@@ -1,0 +1,31 @@
+main {
+  display: grid;
+  grid-gap: 10px;
+  font-family: sans-serif;
+  grid-template:
+    /*Repite 4 filas de 50px y 3 columnas de una fraccion*/
+    repeat(4, 50px) / repeat(3, 1fr);
+
+    /*Row Axis (alineacion horizontal)*/
+    justify-items: stretch; /*valor por defecto*/
+    /*justify-items: start; Alinea el contenido al principio*/
+
+    /*Column Axis (alineacion vertical)*/
+    align-items: stretch; /*Valor por defecto*/
+    /*align-items: start; Alinea el contenido al principio*/
+
+  ;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: goldenrod;
+}
+
+div:nth-child(5){
+  background-color: red;
+  align-self:stretch; /*Por defecto*/
+  /*align-self:end; Alinea el contenido al final*/
+}

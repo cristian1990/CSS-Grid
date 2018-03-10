@@ -1,0 +1,22 @@
+main {
+  height: 100vh;
+  display: grid;
+  grid-gap: 10px;
+  font-family: sans-serif;
+  grid:
+    /*Filas / Columnas
+    10fr 5fr / 2fr 8fr*/
+
+    /*Repetimos el patron en filas en los implicit Grid
+    auto-flow 10fr 5fr / 2fr 8fr;*/
+
+    /*Repetimos el patron en columnas en los implicit Grid*/
+    10fr 5fr / auto-flow  2fr 8fr;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: goldenrod;
+}
